@@ -1,10 +1,16 @@
 
 exports.min = function min (array) {
-  return 0;
+  if(typeof array == 'undefined' || array.length == 0) {
+    return 0;
+  }
+  return array.slice().sort((el1, el2) => el1 - el2)[0];
 }
 
 exports.max = function max (array) {
-  return 0;
+  if(typeof array == 'undefined' || array.length == 0) {
+    return 0;
+  }
+  return array.slice().sort((el1, el2) => el2 - el1)[0];
 }
 
 exports.avg = function avg (array) {
